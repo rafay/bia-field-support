@@ -16,5 +16,19 @@ for batteries replacement for hand-held devices.
        npm install -g @angular/cli
     ```
 
+#### Clone the project to local directory
+- Use command
+    ```
+  git clone https://github.com/rafay/bia-field-support.git  
+    ```
+#### Running the project
+1. From the project directory in terminal run following once
+     ```
+    npm install
+    ```
+2. Run the project in order to open in default browser with following command
+    ```
+   ng serve -o
+   ```
 
 
