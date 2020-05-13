@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {RoutesModule} from "./routes/routes.module";
+import {SharedModule} from "./shared/shared.module";
+import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppLayoutComponent
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     RoutesModule
   ],
   providers: [],
