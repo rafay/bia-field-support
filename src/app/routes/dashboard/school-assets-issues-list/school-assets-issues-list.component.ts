@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SchoolAssetsRrecord} from '../../../models/SchoolAssetsRrecord';
 import {IssueTypes} from '../../../models/IssueTypes';
+import {AssetsService} from '../../../services/assets.service';
 
 @Component({
   selector: 'app-school-assets-issues-list',
@@ -9,30 +10,21 @@ import {IssueTypes} from '../../../models/IssueTypes';
 })
 export class SchoolAssetsIssuesListComponent implements OnInit {
 
-  batteryIssuesList: SchoolAssetsRrecord[] = [
-    {
-      academyId: 30006,
-      issueType: IssueTypes.BatteryIssue,
-      count: 10
-    },
-    {
-      academyId: 30007,
-      issueType: IssueTypes.BatteryIssue,
-      count: 20
-    },
-    {
-      academyId: 30008,
-      issueType: IssueTypes.BatteryIssue,
-      count: 30
-    }
-  ];
+  batteryIssuesList: SchoolAssetsRrecord[] = [];
 
   displayedColumns: string[] = ['academyId', 'issueType', 'count'];
 
-  constructor() {
+  constructor(private assetsService: AssetsService) {
   }
 
   ngOnInit(): void {
+    this.assetsService.getListOfSchoolsWithIssues()
+      .subscribe((data: any) => {
+        data = data.sort((a, b) => {
+          return b.count - a.count;
+        });
+        this.batteryIssuesList = data;
+      });
   }
 
 }

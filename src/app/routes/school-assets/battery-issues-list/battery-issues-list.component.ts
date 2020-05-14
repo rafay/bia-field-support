@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BatteryIssueRecord} from '../../../models/BatteryIssueRecord';
 import {ActivatedRoute} from '@angular/router';
+import {AssetsService} from '../../../services/assets.service';
 
 @Component({
   selector: 'app-battery-issues-list',
@@ -9,37 +10,39 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class BatteryIssuesListComponent implements OnInit {
 
-  batteryIssues: BatteryIssueRecord[] = [
-    {
-      academyId: 30006,
-      serialNumber: 'TT-C67ML-A-0001-01429',
-      avgDailyDischarge: 45
-    },
-    {
-      academyId: 30006,
-      serialNumber: 'TT-C67ML-A-0001-01444',
-      avgDailyDischarge: 51
-    },
-    {
-      academyId: 30006,
-      serialNumber: 'NGTT-0944',
-      avgDailyDischarge: 20
-    }
-  ];
+  batteryIssues: BatteryIssueRecord[] = [];
 
   academyId: number;
 
   displayedColumns: string[] = ['academyId', 'serialNumber', 'avgDailyDischarge'];
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private assetsService: AssetsService) {
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(
       params => {
-        this.academyId = +params['academyId'];
+        if (params.academyId) {
+          this.academyId = +params.academyId;
+          this.populateData();
+        }
       }
     );
+  }
+
+  populateData() {
+    this.assetsService.getListOfDevicesWithBatteryConsumption()
+      .subscribe((data: BatteryIssueRecord[]) => {
+        data = data.filter((d) => {
+          return d.academyId === this.academyId;
+        });
+
+        data = data.sort((a, b) => {
+          return b.avgDailyDischarge - a.avgDailyDischarge;
+        });
+
+        this.batteryIssues = data;
+      });
   }
 
 }

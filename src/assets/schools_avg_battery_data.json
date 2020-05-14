@@ -1,0 +1,17 @@
+[
+  {
+    "academyId": 30006,
+    "serialNumber": "TT-C67ML-A-0001-01429",
+    "avgDailyDischarge": 45
+  },
+  {
+    "academyId": 30006,
+    "serialNumber": "TT-C67ML-A-0001-01444",
+    "avgDailyDischarge": 51
+  },
+  {
+    "academyId": 30006,
+    "serialNumber": "NGTT-0944",
+    "avgDailyDischarge": 20
+  }
+]
