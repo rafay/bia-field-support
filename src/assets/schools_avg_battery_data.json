@@ -13,5 +13,70 @@
     "academyId": 30006,
     "serialNumber": "NGTT-0944",
     "avgDailyDischarge": 20
+  },
+  {
+    "academyId": 30006,
+    "serialNumber": "NGTT-0945",
+    "avgDailyDischarge": 25
+  },
+  {
+    "academyId": 30007,
+    "serialNumber": "TT-C67ML-A-0001-01430",
+    "avgDailyDischarge": 35
+  },
+  {
+    "academyId": 30007,
+    "serialNumber": "TT-C67ML-A-0001-01445",
+    "avgDailyDischarge": 12
+  },
+  {
+    "academyId": 30007,
+    "serialNumber": "NGTT-094354546545",
+    "avgDailyDischarge": 41
+  },
+  {
+    "academyId": 30007,
+    "serialNumber": "NGTT-094554658724",
+    "avgDailyDischarge": 59
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "TT-C67ML-A-0001-74121",
+    "avgDailyDischarge": 42
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "TT-C67ML-A-0001-35711",
+    "avgDailyDischarge": 66
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "NGTT-65684321",
+    "avgDailyDischarge": 36
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "NGTT-89745321",
+    "avgDailyDischarge": 59
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "TT-C67ML-A-0001-44561",
+    "avgDailyDischarge": 15
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "TT-C67ML-A-0001-87654654",
+    "avgDailyDischarge": 56
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "NGTT-8132654",
+    "avgDailyDischarge": 41
+  },
+  {
+    "academyId": 30008,
+    "serialNumber": "NGTT-094554658724",
+    "avgDailyDischarge": 12
   }
 ]

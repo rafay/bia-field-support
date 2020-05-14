@@ -2,16 +2,16 @@
   {
     "academyId": 30006,
     "issueType": "Battery",
-    "count": 10
+    "count": 2
   },
   {
     "academyId": 30007,
     "issueType": "Battery",
-    "count": 20
+    "count": 3
   },
   {
     "academyId": 30008,
     "issueType": "Battery",
-    "count": 30
+    "count": 7
   }
 ]
