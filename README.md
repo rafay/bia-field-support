@@ -30,5 +30,21 @@ for batteries replacement for hand-held devices.
     ```
    ng serve -o
    ```
+#### Running unit tests
+1. Run following command for unit-tests
+   ```
+   npm run test
+   ```
+#### Following assumptions were made while working on this task
+> Data that needs to be shown in UI will actually come from backend, so manupulating/processing data in UI was skipped. (I believe heavy calculations and manupulation of data should happen on server side). Hence, went with data stored in assets directory which can be readily bound to UI.
+
+> For the purpose of  simplicity, used table structure for UI.
+
+#### Further enhancement anticipations
+> The Dashboard page shows List of academies having issues with assets (in this case Batteries). But, this can be easily extended to issues with other assets as well. Ex: Tablets, Laptops, Projectors etc.
+
+> Initial landing page Dashboard can have graphical representation of issues based on various types of assets.
+>
+> 
 
 
