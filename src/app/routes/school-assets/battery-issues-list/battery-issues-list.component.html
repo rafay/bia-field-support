@@ -1,0 +1,30 @@
+<div>
+  <h1>Battery Issues for Academy : {{academyId}}</h1>
+
+  <div>
+    <mat-table [dataSource]="batteryIssues" class="mat-elevation-z8">
+      <!-- academyId Column -->
+      <ng-container matColumnDef="academyId">
+        <mat-header-cell *matHeaderCellDef> Academy ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.academyId}} </mat-cell>
+      </ng-container>
+
+      <!-- serialNumber Column -->
+      <ng-container matColumnDef="serialNumber">
+        <mat-header-cell *matHeaderCellDef> Device Serial No. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.serialNumber}} </mat-cell>
+      </ng-container>
+
+      <!-- avgDailyDischarge Column -->
+      <ng-container matColumnDef="avgDailyDischarge">
+        <mat-header-cell *matHeaderCellDef> Avg. Daily Discharge </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <app-highlight-threshold [Value]="element.avgDailyDischarge"></app-highlight-threshold>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>

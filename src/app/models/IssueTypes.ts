@@ -1,4 +1,4 @@
 export enum IssueTypes {
-  BatteryIssue,
-  TabletIssue
+  BatteryIssue = 'Battery',
+  TabletIssue = 'Tablet'
 }

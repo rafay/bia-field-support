@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { SchoolAssetsRoutingModule } from './school-assets-routing.module';
-import { BatteriesDataComponent } from './batteries-data/batteries-data.component';
+import { BatteryIssuesListComponent } from './battery-issues-list/battery-issues-list.component';
+import {SharedModule} from '../../shared/shared.module';
 
 
 @NgModule({
-  declarations: [BatteriesDataComponent],
+  declarations: [BatteryIssuesListComponent],
   imports: [
-    CommonModule,
+    SharedModule,
     SchoolAssetsRoutingModule
   ]
 })
