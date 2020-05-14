@@ -1,7 +1,7 @@
-import {IssueTypes} from "./IssueTypes";
+import {IssueTypes} from './IssueTypes';
 
 export class SchoolAssetsRrecord {
   academyId: number;
   issueType: IssueTypes;
-  count: number
+  count: number;
 }

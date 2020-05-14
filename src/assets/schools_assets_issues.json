@@ -1,0 +1,17 @@
+[
+  {
+    "academyId": 30006,
+    "issueType": "Battery",
+    "count": 10
+  },
+  {
+    "academyId": 30007,
+    "issueType": "Battery",
+    "count": 20
+  },
+  {
+    "academyId": 30008,
+    "issueType": "Battery",
+    "count": 30
+  }
+]

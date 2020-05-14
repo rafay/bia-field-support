@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {RoutesModule} from "./routes/routes.module";
-import {SharedModule} from "./shared/shared.module";
+import {RoutesModule} from './routes/routes.module';
+import {SharedModule} from './shared/shared.module';
 import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppLayoutComponent } from './layouts/app-layout/app-layout.component';
   imports: [
     BrowserModule,
     SharedModule,
-    RoutesModule
+    RoutesModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,17 +1,33 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {RouterModule} from "@angular/router";
+import {RouterModule} from '@angular/router';
+import {MaterialModule} from '../material.module';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {HighlightThresholdComponent} from './components/highlight-threshold/highlight-threshold.component';
 
+const THIRD_MODULES = [
+  MaterialModule,
+  FlexLayoutModule
+];
+
+const COMPONENTS = [
+  HighlightThresholdComponent
+];
+const PIPES = [];
 
 @NgModule({
-  declarations: [],
+  declarations: [...COMPONENTS, ...PIPES],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ...THIRD_MODULES,
+    ...COMPONENTS,
+    ...PIPES
   ]
 })
 export class SharedModule {

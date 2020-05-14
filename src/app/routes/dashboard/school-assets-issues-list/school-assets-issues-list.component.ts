@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {SchoolAssetsRrecord} from "../../../models/SchoolAssetsRrecord";
-import {IssueTypes} from "../../../models/IssueTypes";
+import {SchoolAssetsRrecord} from '../../../models/SchoolAssetsRrecord';
+import {IssueTypes} from '../../../models/IssueTypes';
 
 @Component({
   selector: 'app-school-assets-issues-list',
@@ -26,6 +26,8 @@ export class SchoolAssetsIssuesListComponent implements OnInit {
       count: 30
     }
   ];
+
+  displayedColumns: string[] = ['academyId', 'issueType', 'count'];
 
   constructor() {
   }

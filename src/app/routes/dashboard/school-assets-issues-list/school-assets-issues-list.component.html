@@ -2,6 +2,28 @@
   <h1>School Assets Issues</h1>
 
   <div>
-    <app-school-asset-issue></app-school-asset-issue>
+    <mat-table [dataSource]="batteryIssuesList" class="mat-elevation-z8">
+      <!-- academyId Column -->
+      <ng-container matColumnDef="academyId">
+        <mat-header-cell *matHeaderCellDef> Academy ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.academyId}} </mat-cell>
+      </ng-container>
+
+      <!-- serialNumber Column -->
+      <ng-container matColumnDef="issueType">
+        <mat-header-cell *matHeaderCellDef> Issue Type </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.issueType}} </mat-cell>
+      </ng-container>
+
+      <!-- count Column -->
+      <ng-container matColumnDef="count">
+        <mat-header-cell *matHeaderCellDef>Issue Count</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.count}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
   </div>
 </div>

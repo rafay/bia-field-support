@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BatteriesDataComponent } from './batteries-data.component';
+import { HighlightThresholdComponent } from './highlight-threshold.component';
 
-describe('BatteriesDataComponent', () => {
-  let component: BatteriesDataComponent;
-  let fixture: ComponentFixture<BatteriesDataComponent>;
+describe('HighlightThresholdComponent', () => {
+  let component: HighlightThresholdComponent;
+  let fixture: ComponentFixture<HighlightThresholdComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BatteriesDataComponent ]
+      declarations: [ HighlightThresholdComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BatteriesDataComponent);
+    fixture = TestBed.createComponent(HighlightThresholdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
