@@ -10,7 +10,7 @@ import {AssetsService} from '../../../services/assets.service';
 })
 export class SchoolAssetsIssuesListComponent implements OnInit {
 
-  batteryIssuesList: SchoolAssetsRrecord[] = [];
+  schoolAssetsRrecords: SchoolAssetsRrecord[] = [];
 
   displayedColumns: string[] = ['academyId', 'issueType', 'count'];
 
@@ -23,7 +23,7 @@ export class SchoolAssetsIssuesListComponent implements OnInit {
         data = data.sort((a, b) => {
           return b.count - a.count;
         });
-        this.batteryIssuesList = data;
+        this.schoolAssetsRrecords = data;
       });
   }
 

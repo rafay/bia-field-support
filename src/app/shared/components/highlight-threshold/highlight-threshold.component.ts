@@ -6,9 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./highlight-threshold.component.scss']
 })
 export class HighlightThresholdComponent implements OnInit {
-
   private value: string;
-
   className = '';
   selected = false;
 
@@ -30,12 +28,9 @@ export class HighlightThresholdComponent implements OnInit {
 
   setThresholdClass() {
     const valueNum = +this.Value;
-
     if (valueNum >= 30) {
       this.className = 'accent';
       this.selected = true;
     }
-
   }
-
 }
