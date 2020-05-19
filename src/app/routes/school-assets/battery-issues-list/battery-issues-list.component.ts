@@ -31,12 +31,9 @@ export class BatteryIssuesListComponent implements OnInit {
   }
 
   populateData() {
-    this.assetsService.getListOfDevicesWithBatteryConsumption()
-      .subscribe((data: BatteryIssueRecord[]) => {
-        data = data.filter((d) => {
-          return d.academyId === this.academyId;
-        });
-
+    this.assetsService.getListOfDevicesWithBatteryConsumption(this.academyId)
+      .subscribe((data: any) => {
+        
         data = data.sort((a, b) => {
           return b.avgDailyDischarge - a.avgDailyDischarge;
         });

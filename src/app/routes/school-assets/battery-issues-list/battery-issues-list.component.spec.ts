@@ -22,11 +22,6 @@ const sampleData = [
     academyId: 30006,
     serialNumber: 'NGTT-0944',
     avgDailyDischarge: 20
-  },
-  {
-    academyId: 30008,
-    serialNumber: 'NGTT-0945',
-    avgDailyDischarge: 15
   }
 ];
 

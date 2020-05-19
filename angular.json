@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "bia-field-support"
+  "defaultProject": "bia-field-support",
+  "cli": {
+    "analytics": false
+  }
 }
