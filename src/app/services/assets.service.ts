@@ -110,7 +110,7 @@ export class AssetsService {
     }));
   }
 
-  private getDailyAverage(readings: any[]) {
+  getDailyAverage(readings: any[]) {
     var dischargeAverages = [];
 
     if (readings.length > 1) {
