@@ -36,15 +36,13 @@ for batteries replacement for hand-held devices.
    npm run test
    ```
 #### Following assumptions were made while working on this task
-> Data that needs to be shown in UI will actually come from backend, so manupulating/processing data in UI was skipped. (I believe heavy calculations and manupulation of data should happen on server side). Hence, went with data stored in assets directory which can be readily bound to UI.
+> Data that needs to be shown in UI will be populated locally from source file as shared in the proplem task. Before they application starts to load any page, the data from source file is manupulated for easing query process by applying proper aggregation/group of data by acadmyId, serialNumber and average percentage discharge value.
 
 > For the purpose of  simplicity, used table structure for UI.
 
 #### Further enhancement anticipations
+> The heavy lifting of calculating average battery usage shall be moved to backend and served through API directly rather than having complex calculations on front end.
+
 > The Dashboard page shows List of academies having issues with assets (in this case Batteries). But, this can be easily extended to issues with other assets as well. Ex: Tablets, Laptops, Projectors etc.
 
 > Initial landing page Dashboard can have graphical representation of issues based on various types of assets.
->
-> 
-
-
